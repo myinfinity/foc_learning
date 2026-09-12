@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"base_vofa\startup_stm32g474xx.o"
+"base_vofa\main.o"
+"base_vofa\gpio.o"
+"base_vofa\usart.o"
+"base_vofa\stm32g4xx_it.o"
+"base_vofa\stm32g4xx_hal_msp.o"
+"base_vofa\stm32g4xx_hal_pwr_ex.o"
+"base_vofa\stm32g4xx_hal_uart.o"
+"base_vofa\stm32g4xx_hal_uart_ex.o"
+"base_vofa\stm32g4xx_hal.o"
+"base_vofa\stm32g4xx_hal_rcc.o"
+"base_vofa\stm32g4xx_hal_rcc_ex.o"
+"base_vofa\stm32g4xx_hal_flash.o"
+"base_vofa\stm32g4xx_hal_flash_ex.o"
+"base_vofa\stm32g4xx_hal_flash_ramfunc.o"
+"base_vofa\stm32g4xx_hal_gpio.o"
+"base_vofa\stm32g4xx_hal_exti.o"
+"base_vofa\stm32g4xx_hal_dma.o"
+"base_vofa\stm32g4xx_hal_dma_ex.o"
+"base_vofa\stm32g4xx_hal_pwr.o"
+"base_vofa\stm32g4xx_hal_cortex.o"
+"base_vofa\system_stm32g4xx.o"
+"base_vofa\vofa.o"
+--strict --scatter "stm32g474xx_flash.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "base_vofa.map" -o base_vofa\base_vofa.axf
