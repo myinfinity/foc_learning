@@ -1,7 +1,7 @@
 Dependencies for Project 'base_vofa', Target 'base_vofa': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32g474xx.s)(0x6AA63860)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 532" --pd "_RTE_ SETA 1" --pd "STM32G474xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g474xx.lst --xref -o base_vofa\startup_stm32g474xx.o --depend base_vofa\startup_stm32g474xx.d)
-F (../Core/Src/main.c)(0x6AA64348)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\main.o --omf_browse base_vofa\main.crf --depend base_vofa\main.d)
+F (../Core/Src/main.c)(0x6AA682AC)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\main.o --omf_browse base_vofa\main.crf --depend base_vofa\main.d)
 I (../Core/Inc/main.h)(0x6AA3ED99)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6A9C257D)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x6AA50B58)
@@ -37,10 +37,13 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
 I (../Core/Inc/tim.h)(0x6AA620C1)
 I (../Core/Inc/usart.h)(0x6AA3F52D)
 I (../Core/Inc/gpio.h)(0x6AA3ED99)
-I (../User/Vofa.h)(0x6AA547CD)
+I (../User/Vofa.h)(0x6AA68850)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x5F63878A)
-I (../User/FOCAlgorithm.h)(0x6AA632F7)
+I (../User/StateMachine.h)(0x6AA688C1)
+I (../User/FOCAlgorithm.h)(0x6AA67F05)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5F63877C)
+I (../User/Hardware_Driver.h)(0x6AA6632D)
+I (../User/Motor_Config.h)(0x6AA663E7)
 F (../Core/Src/gpio.c)(0x6AA3F52C)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\gpio.o --omf_browse base_vofa\gpio.crf --depend base_vofa\gpio.d)
 I (../Core/Inc/gpio.h)(0x6AA3ED99)
 I (../Core/Inc/main.h)(0x6AA3ED99)
@@ -143,7 +146,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
-F (../Core/Src/stm32g4xx_it.c)(0x6AA6449B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\stm32g4xx_it.o --omf_browse base_vofa\stm32g4xx_it.crf --depend base_vofa\stm32g4xx_it.d)
+F (../Core/Src/stm32g4xx_it.c)(0x6AA68770)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\stm32g4xx_it.o --omf_browse base_vofa\stm32g4xx_it.crf --depend base_vofa\stm32g4xx_it.d)
 I (../Core/Inc/main.h)(0x6AA3ED99)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6A9C257D)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x6AA50B58)
@@ -177,9 +180,12 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
 I (../Core/Inc/stm32g4xx_it.h)(0x6AA50B58)
-I (../User/FOCAlgorithm.h)(0x6AA632F7)
+I (../User/StateMachine.h)(0x6AA688C1)
+I (../User/FOCAlgorithm.h)(0x6AA67F05)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5F63877C)
 I (../Core/Inc/Tim.h)(0x6AA620C1)
+I (../User/Hardware_Driver.h)(0x6AA6632D)
+I (../User/Motor_Config.h)(0x6AA663E7)
 F (../Core/Src/stm32g4xx_hal_msp.c)(0x6AA3ED99)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\stm32g4xx_hal_msp.o --omf_browse base_vofa\stm32g4xx_hal_msp.crf --depend base_vofa\stm32g4xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x6AA3ED99)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6A9C257D)
@@ -789,8 +795,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
-F (..\User\Vofa.c)(0x6AA547CF)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\vofa.o --omf_browse base_vofa\vofa.crf --depend base_vofa\vofa.d)
-I (..\User\Vofa.h)(0x6AA547CD)
+F (..\User\Vofa.c)(0x6AA68809)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\vofa.o --omf_browse base_vofa\vofa.crf --depend base_vofa\vofa.d)
+I (..\User\Vofa.h)(0x6AA68850)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5F63877C)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x5F63878A)
 I (../Core/Inc/usart.h)(0x6AA3F52D)
@@ -825,11 +831,14 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
-I (..\User\FOCAlgorithm.h)(0x6AA632F7)
+I (..\User\StateMachine.h)(0x6AA688C1)
+I (..\User\FOCAlgorithm.h)(0x6AA67F05)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5F63877C)
 I (../Core/Inc/Tim.h)(0x6AA620C1)
-F (..\User\FOCAlgorithm.c)(0x6AA64128)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\focalgorithm.o --omf_browse base_vofa\focalgorithm.crf --depend base_vofa\focalgorithm.d)
-I (..\User\FOCAlgorithm.h)(0x6AA632F7)
+I (..\User\Hardware_Driver.h)(0x6AA6632D)
+I (..\User\Motor_Config.h)(0x6AA663E7)
+F (..\User\FOCAlgorithm.c)(0x6AA67EFB)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\focalgorithm.o --omf_browse base_vofa\focalgorithm.crf --depend base_vofa\focalgorithm.d)
+I (..\User\FOCAlgorithm.h)(0x6AA67F05)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5F63877C)
 I (../Core/Inc/Tim.h)(0x6AA620C1)
 I (../Core/Inc/main.h)(0x6AA3ED99)
@@ -864,3 +873,78 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
+F (..\User\HardWare_Driver.c)(0x6AA65180)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\hardware_driver.o --omf_browse base_vofa\hardware_driver.crf --depend base_vofa\hardware_driver.d)
+I (..\User\HardWare_Driver.h)(0x6AA6632D)
+I (../Core/Inc/tim.h)(0x6AA620C1)
+I (../Core/Inc/main.h)(0x6AA3ED99)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6A9C257D)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x6AA50B58)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x6A9C2570)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5F63877C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6A9C257D)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5F63877C)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
+F (..\User\Motor_Config.h)(0x6AA663E7)()
+F (..\User\StateMachine.c)(0x6AA68943)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../User-I.\RTE\_base_vofa-IE:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="532" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o base_vofa\statemachine.o --omf_browse base_vofa\statemachine.crf --depend base_vofa\statemachine.d)
+I (..\User\StateMachine.h)(0x6AA688C1)
+I (..\User\FOCAlgorithm.h)(0x6AA67F05)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5F63877C)
+I (../Core/Inc/Tim.h)(0x6AA620C1)
+I (../Core/Inc/main.h)(0x6AA3ED99)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6A9C257D)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x6AA50B58)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x6A9C257D)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x6A9C2570)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5F63877C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6A9C2570)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6A9C257D)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5F63877C)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6A9C257D)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6A9C257D)
+I (..\User\Hardware_Driver.h)(0x6AA6632D)
+I (..\User\Motor_Config.h)(0x6AA663E7)

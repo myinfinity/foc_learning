@@ -844,6 +844,21 @@
               <FileType>1</FileType>
               <FilePath>..\User\FOCAlgorithm.c</FilePath>
             </File>
+            <File>
+              <FileName>HardWare_Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\HardWare_Driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Motor_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\Motor_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>StateMachine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\StateMachine.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

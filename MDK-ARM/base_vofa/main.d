@@ -37,5 +37,8 @@ base_vofa\main.o: ../Core/Inc/usart.h
 base_vofa\main.o: ../Core/Inc/gpio.h
 base_vofa\main.o: ../User/Vofa.h
 base_vofa\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+base_vofa\main.o: ../User/StateMachine.h
 base_vofa\main.o: ../User/FOCAlgorithm.h
 base_vofa\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+base_vofa\main.o: ../User/Hardware_Driver.h
+base_vofa\main.o: ../User/Motor_Config.h

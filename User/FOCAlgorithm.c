@@ -1,8 +1,5 @@
 #include "FOCAlgorithm.h"
 
-/*创建FOC结构体变量*/
-FOC_TypeDef FOC;
-
 /*
  * @brief: 反Park变换
  * @param: foc - FOC参数结构体指针
@@ -48,14 +45,37 @@ void SVPWM_ZeroSqlInject(FOC_TypeDef *state)
     state->Vw_Mod = state->Vw + V0;
 
     /*将三相马鞍波电压转换为PWM比较值*/
-    state->Tcmp1 = ((state->Vu_Mod  /12.0f) + 0.5) *4249.0f;
-    state->Tcmp2 = ((state->Vv_Mod  /12.0f) + 0.5) *4249.0f;
-    state->Tcmp3 = ((state->Vw_Mod  /12.0f) + 0.5) *4249.0f;
-
-    /*将计算出的三相CCR赋值给PWM比较寄存器*/
-    TIM1->CCR1 = state->Tcmp1;
-    TIM1->CCR2 = state->Tcmp2;
-    TIM1->CCR3 = state->Tcmp3;
-
+    state->Tcmp1 = ((state->Vu_Mod  /state->UDC) + 0.5) *state->Tpwm;
+    state->Tcmp2 = ((state->Vv_Mod  /state->UDC) + 0.5) *state->Tpwm;
+    state->Tcmp3 = ((state->Vw_Mod  /state->UDC) + 0.5) *state->Tpwm;
 }
 
+/*
+ * @brief: 设置直流母线电压和PWM周期参数
+ * @param: state - FOC参数结构体指针
+ * @param: Udc - 直流母线电压
+ * @param: Tpwm - PWM周期计数值
+ * @return: None
+ */
+void Set_Udc_Tpwm_parameters(FOC_TypeDef *state, float Udc, float Tpwm)
+{
+    state->UDC = Udc;
+    state->Tpwm = Tpwm;
+}
+
+/**
+ * @brief: FOC电压更新函数
+ * @param: state - FOC参数结构体指针
+ * @return: None
+ */
+void Foc_VoltageUpdate(FOC_TypeDef *state)
+{
+    /*反Park变换*/
+    Rev_Park_Transf(state);
+
+    /*反Clarke变换*/
+    Rev_Clark_Transf(state);
+
+    /*SVPWM*/
+    SVPWM_ZeroSqlInject(state);
+}

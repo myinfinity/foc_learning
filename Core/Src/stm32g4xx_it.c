@@ -22,7 +22,7 @@
 #include "stm32g4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "FOCAlgorithm.h"
+#include "StateMachine.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -216,31 +216,7 @@ void TIM6_DAC_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 /*定时器溢出中断函数*/
 
-#define _2PI 6.283185307179f
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-  /*设置vd = 0, vq = 1 , Theta = 自增角度*/
-  if(htim->Instance == TIM6){
-    static float Theta = 0.0f; // 定义一个静态变量来保存角度  
-    Theta += 0.001f; // 每次中断增加一个小角度
-    if (Theta >= _2PI){ // 如果角度超过2π，则重置为0
-        Theta -= _2PI;
-    }
-    /*FOC角度*/
-    FOC.Theta = Theta;
-    /*设置d轴电压为0，q轴电压为1*/
-    FOC.Vd = 0.0f;
-    FOC.Vq = 1.0f;
-
-    /*反Park变换*/
-    Rev_Park_Transf(&FOC);
-
-    /*反Clarke变换*/
-    Rev_Clark_Transf(&FOC);
-
-    /*SVPWM*/
-    SVPWM_ZeroSqlInject(&FOC);
-  }
-  
-
+  Motor_StateMachine_Run(&MotorSystem);
 }
 /* USER CODE END 1 */

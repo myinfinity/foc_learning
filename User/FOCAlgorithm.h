@@ -9,9 +9,11 @@
  */
 typedef struct
 {
+    float UDC;      /* 直流母线电压 */
+    float Tpwm;     /* PWM周期计数值 */
     float Vd;       /* d轴电压 */
     float Vq;       /* q轴电压 */
-    float Theta;   /* 电机角度 */
+    float Theta;    /* 电机角度 */
 
     float Valpha;   /* α轴电压 */
     float Vbeta;    /* β轴电压 */
@@ -33,8 +35,9 @@ typedef struct
 void Rev_Park_Transf(FOC_TypeDef *state);
 void Rev_Clark_Transf(FOC_TypeDef *state);
 void SVPWM_ZeroSqlInject(FOC_TypeDef *state);
+void Set_Udc_Tpwm_parameters(FOC_TypeDef *state, float Udc, float Tpwm);
+void Foc_VoltageUpdate(FOC_TypeDef *state);
 
-/*======== 全局变量声明 ========*/
-extern FOC_TypeDef FOC;
+
 
 #endif // FOCALGORITHM_H

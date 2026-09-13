@@ -33,6 +33,9 @@ base_vofa\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_
 base_vofa\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 base_vofa\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
 base_vofa\stm32g4xx_it.o: ../Core/Inc/stm32g4xx_it.h
+base_vofa\stm32g4xx_it.o: ../User/StateMachine.h
 base_vofa\stm32g4xx_it.o: ../User/FOCAlgorithm.h
 base_vofa\stm32g4xx_it.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 base_vofa\stm32g4xx_it.o: ../Core/Inc/Tim.h
+base_vofa\stm32g4xx_it.o: ../User/Hardware_Driver.h
+base_vofa\stm32g4xx_it.o: ../User/Motor_Config.h

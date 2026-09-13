@@ -4,7 +4,7 @@
 #include "stdint.h"
 #include "string.h"
 #include "usart.h"
-#include "FOCAlgorithm.h"
+#include "StateMachine.h"
 /*====宏定义====*/
 #define DATA_NUM 9                  /*定义发送数量*/
 #define DATA_LEN (DATA_NUM*4 + 4)   /*定义发送长度*/
