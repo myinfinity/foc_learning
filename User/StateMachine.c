@@ -17,6 +17,8 @@ void Motor_StateMachine_Init(Motor_TypeDef *MotorSystem)
    Motor_Hardware_Init();
   /* 设置PWM周期计数值和直流母线电压 */
   Set_Udc_Tpwm_parameters(&MotorSystem->FOC, UDC, TPWM);
+  /* 初始化VF速度控制参数 */
+  VF_SpeedControl_Param_Init(&MotorSystem->VF, 50, 0, 0.0001f, FOC_TS);
 }
 
 /*
@@ -26,21 +28,11 @@ void Motor_StateMachine_Init(Motor_TypeDef *MotorSystem)
  */
 void Motor_StateMachine_Run(Motor_TypeDef *state)
 {
-    /*创建虚拟角度*/
-    static float Theta = 0.0f; 
-    /*虚拟角度累加*/
-    Theta += 0.0003f; 
-    /*限制角度范围*/
-    if (Theta >= _2PI){ 
-        Theta -= _2PI;
-    }
-
-    /*设置电机角度*/
-    state->FOC.Theta = Theta;
-
+    VF_SpeedControl_Update(&state->VF, &state->FOC.Theta);
+    
     /*设置d轴电压和q轴电压*/
-    state->FOC.Vd = 0.0f;
-    state->FOC.Vq = 0.5f;
+    //state->FOC.Vd = 0.0f;
+    //state->FOC.Vq = 0.5f;
 
     Foc_VoltageUpdate(&state->FOC);
 

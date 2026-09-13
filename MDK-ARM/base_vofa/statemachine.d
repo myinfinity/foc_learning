@@ -2,7 +2,8 @@ base_vofa\statemachine.o: ..\User\StateMachine.c
 base_vofa\statemachine.o: ..\User\StateMachine.h
 base_vofa\statemachine.o: ..\User\FOCAlgorithm.h
 base_vofa\statemachine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-base_vofa\statemachine.o: ../Core/Inc/Tim.h
+base_vofa\statemachine.o: ..\User\Hardware_Driver.h
+base_vofa\statemachine.o: ../Core/Inc/tim.h
 base_vofa\statemachine.o: ../Core/Inc/main.h
 base_vofa\statemachine.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
 base_vofa\statemachine.o: ../Core/Inc/stm32g4xx_hal_conf.h
@@ -36,5 +37,4 @@ base_vofa\statemachine.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.
 base_vofa\statemachine.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 base_vofa\statemachine.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 base_vofa\statemachine.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
-base_vofa\statemachine.o: ..\User\Hardware_Driver.h
 base_vofa\statemachine.o: ..\User\Motor_Config.h

@@ -10,8 +10,8 @@
  * 
  */
 typedef struct {
-    FOC_TypeDef             FOC;    /*FOC状态*/
-
+    FOC_TypeDef                     FOC;    /*FOC状态*/
+    VF_Control_Speed_TypeDef        VF;     /*VF速度控制状态*/
 } Motor_TypeDef;
 
 void Motor_StateMachine_Init(Motor_TypeDef *MotorSystem);
@@ -21,7 +21,6 @@ void Motor_StateMachine_Run(Motor_TypeDef *MotorSystem);
 * @brief: 电机状态机结构体变量
 * 
 */
-
 extern Motor_TypeDef MotorSystem;
 
 

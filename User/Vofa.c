@@ -10,9 +10,10 @@ VofaSend_Type VofaSend;
 void Vofa_Send_Task(void){
     /*填入需要发送的数据*/
     VofaSend.Send_Data_Arrayt[0] = MotorSystem.FOC.Theta;
-    VofaSend.Send_Data_Arrayt[1] = MotorSystem.FOC.Valpha;
-    VofaSend.Send_Data_Arrayt[2] = MotorSystem.FOC.Vbeta;
-    VofaSend.Send_Data_Arrayt[3] = MotorSystem.FOC.Vu;
+    VofaSend.Send_Data_Arrayt[1] = MotorSystem.VF.Target_Speed;
+    VofaSend.Send_Data_Arrayt[2] = MotorSystem.VF.Speed;
+    VofaSend.Send_Data_Arrayt[3] = MotorSystem.VF.Theta;
+	
     VofaSend.Send_Data_Arrayt[4] = MotorSystem.FOC.Vv;
     VofaSend.Send_Data_Arrayt[5] = MotorSystem.FOC.Vw;
     VofaSend.Send_Data_Arrayt[6] = MotorSystem.FOC.Vu_Mod;
