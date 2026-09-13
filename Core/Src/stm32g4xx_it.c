@@ -22,6 +22,7 @@
 #include "stm32g4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FOCAlgorithm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,7 +56,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim6;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -198,6 +199,45 @@ void SysTick_Handler(void)
 /* please refer to the startup file (startup_stm32g4xx.s).                    */
 /******************************************************************************/
 
-/* USER CODE BEGIN 1 */
+/**
+  * @brief This function handles TIM6 global interrupt, DAC1 and DAC3 channel underrun error interrupts.
+  */
+void TIM6_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
 
+  /* USER CODE END TIM6_DAC_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim6);
+  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+
+  /* USER CODE END TIM6_DAC_IRQn 1 */
+}
+
+/* USER CODE BEGIN 1 */
+/*定时器溢出中断函数*/
+
+#define _2PI 6.283185307179f
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+  /*设置vd = 0, vq = 1 , Theta = 自增角度*/
+  static float Theta = 0.0f; // 定义一个静态变量来保存角度  
+  Theta += 0.01f; // 每次中断增加一个小角度
+  if (Theta >= _2PI){ // 如果角度超过2π，则重置为0
+      Theta -= _2PI;
+  }
+  /*FOC角度*/
+  FOC.Theta = Theta;
+  /*设置d轴电压为0，q轴电压为1*/
+  FOC.Vd = 0.0f;
+  FOC.Vq = 1.0f;
+
+  /*反Park变换*/
+  Rev_Park_Transf(&FOC);
+
+  /*反Clarke变换*/
+  Rev_Clark_Transf(&FOC);
+
+  /*SVPWM*/
+  SVPWM_ZeroSqlInject(&FOC);
+
+}
 /* USER CODE END 1 */

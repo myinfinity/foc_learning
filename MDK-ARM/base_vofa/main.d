@@ -28,9 +28,14 @@ base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
 base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
+base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 base_vofa\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
+base_vofa\main.o: ../Core/Inc/tim.h
 base_vofa\main.o: ../Core/Inc/usart.h
 base_vofa\main.o: ../Core/Inc/gpio.h
-base_vofa\main.o: ..\User\Vofa.h
+base_vofa\main.o: ../User/Vofa.h
 base_vofa\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+base_vofa\main.o: ../User/FOCAlgorithm.h
+base_vofa\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
