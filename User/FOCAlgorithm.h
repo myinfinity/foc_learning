@@ -1,6 +1,8 @@
 #ifndef FOCALGORITHM_H
 #define FOCALGORITHM_H
 #include "math.h"
+#include "Tim.h"
+
 /*
  * @brief: FOC参数结构体
  *
@@ -22,7 +24,9 @@ typedef struct
     float Vv_Mod;   /* v相调制电压 */
     float Vw_Mod;   /* w相调制电压 */
 
-
+    int Tcmp1;     /* U相的PWM比较值 */
+    int Tcmp2;     /* V相的PWM比较值 */
+    int Tcmp3;     /* W相的PWM比较值 */
 } FOC_TypeDef;
 
 /*======== 函数声明 ========*/

@@ -22,6 +22,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "Vofa.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -90,7 +91,16 @@ int main(void)
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   MX_TIM6_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+
+  /*初始化6路PWM*/
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);  
   /* 初始化定时器中断 */
   HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
@@ -100,7 +110,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    Vofa_Send_Task();
+		Vofa_Send_Task();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

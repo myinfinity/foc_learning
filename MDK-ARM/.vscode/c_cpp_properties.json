@@ -3,15 +3,15 @@
         {
             "name": "base_vofa",
             "includePath": [
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Core\\Inc",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Drivers\\STM32G4xx_HAL_Driver\\Inc",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Drivers\\STM32G4xx_HAL_Driver\\Inc\\Legacy",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Drivers\\CMSIS\\Device\\ST\\STM32G4xx\\Include",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Drivers\\CMSIS\\Include",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\User",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\MDK-ARM",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Core\\Src",
-                "f:\\prj_stm32\\STM32F474\\03_base_foc\\Drivers\\STM32G4xx_HAL_Driver\\Src"
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Core\\Inc",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Drivers\\STM32G4xx_HAL_Driver\\Inc",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Drivers\\STM32G4xx_HAL_Driver\\Inc\\Legacy",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Drivers\\CMSIS\\Device\\ST\\STM32G4xx\\Include",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Drivers\\CMSIS\\Include",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\User",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\MDK-ARM",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Core\\Src",
+                "f:\\prj_stm32\\STM32F474\\04_base_foc_vf\\Drivers\\STM32G4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

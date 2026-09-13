@@ -37,3 +37,4 @@ base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
 base_vofa\vofa.o: ..\User\FOCAlgorithm.h
 base_vofa\vofa.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+base_vofa\vofa.o: ../Core/Inc/Tim.h
