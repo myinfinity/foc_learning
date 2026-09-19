@@ -2,6 +2,7 @@
 
 VofaSend_Type VofaSend;
 
+
 /*
  * @brief  Vofa发送任务
  * @param  None
@@ -16,9 +17,9 @@ void Vofa_Send_Task(void){
 	
     VofaSend.Send_Data_Arrayt[4] = MotorSystem.FOC.Vv;
     VofaSend.Send_Data_Arrayt[5] = MotorSystem.FOC.Vw;
-    VofaSend.Send_Data_Arrayt[6] = MotorSystem.FOC.Vu_Mod;
-    VofaSend.Send_Data_Arrayt[7] = MotorSystem.FOC.Vv_Mod;
-    VofaSend.Send_Data_Arrayt[8] = MotorSystem.FOC.Vw_Mod;
+    VofaSend.Send_Data_Arrayt[6] = MotorSystem.Encoder.Pulse_Data;
+    VofaSend.Send_Data_Arrayt[7] = MotorSystem.Encoder.Theta;
+    VofaSend.Send_Data_Arrayt[8] = 0;
 
     /*数据处理*/
     Vofa_Data_Process();

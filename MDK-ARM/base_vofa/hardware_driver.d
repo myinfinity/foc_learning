@@ -30,7 +30,10 @@ base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_f
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 base_vofa\hardware_driver.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
+base_vofa\hardware_driver.o: ../Core/Inc/spi.h

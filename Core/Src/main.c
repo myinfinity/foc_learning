@@ -18,10 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "Vofa.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -91,8 +91,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
-  MX_TIM6_Init();
   MX_TIM1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   Motor_StateMachine_Init(&MotorSystem);
   /* USER CODE END 2 */
@@ -103,7 +103,7 @@ int main(void)
   {
     Vofa_Send_Task();
     /* USER CODE END WHILE */
-		
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -9,8 +9,10 @@
 #define _2PI 6.283185307179f
 
 /*=============SVPWM常量=============*/
-#define UDC 12.0f           //直流母线电压
-#define TPWM 4249.0f        //PWM周期计数值
+#define UDC                 12.0f           //直流母线电压
+#define TPWM                4249.0f        //PWM周期计数值
 
+/*=============编码器参数=============*/
+#define ENCODER_LINE        16383
 
 #endif // MOTOR_CONFIG_H

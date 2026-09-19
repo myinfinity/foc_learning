@@ -3,15 +3,15 @@
         {
             "name": "base_vofa",
             "includePath": [
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Core\\Inc",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Drivers\\STM32G4xx_HAL_Driver\\Inc",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Drivers\\STM32G4xx_HAL_Driver\\Inc\\Legacy",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Drivers\\CMSIS\\Device\\ST\\STM32G4xx\\Include",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Drivers\\CMSIS\\Include",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\User",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\MDK-ARM",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Core\\Src",
-                "f:\\prj_stm32\\STM32F474\\06_base_focvf_statemachine_speed\\Drivers\\STM32G4xx_HAL_Driver\\Src"
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Core\\Inc",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Drivers\\STM32G4xx_HAL_Driver\\Inc",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Drivers\\STM32G4xx_HAL_Driver\\Inc\\Legacy",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Drivers\\CMSIS\\Device\\ST\\STM32G4xx\\Include",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Drivers\\CMSIS\\Include",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\User",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\MDK-ARM",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Core\\Src",
+                "f:\\prj_stm32\\STM32F474\\07_base_foc_encoder\\Drivers\\STM32G4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

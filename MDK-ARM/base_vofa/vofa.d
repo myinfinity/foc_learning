@@ -31,6 +31,8 @@ base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 base_vofa\vofa.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
@@ -40,4 +42,6 @@ base_vofa\vofa.o: ..\User\FOCAlgorithm.h
 base_vofa\vofa.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 base_vofa\vofa.o: ..\User\Hardware_Driver.h
 base_vofa\vofa.o: ../Core/Inc/tim.h
+base_vofa\vofa.o: ../Core/Inc/spi.h
 base_vofa\vofa.o: ..\User\Motor_Config.h
+base_vofa\vofa.o: ..\User\encoder.h
